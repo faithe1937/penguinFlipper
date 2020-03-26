@@ -1,188 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8">
+    <title>Penguin Flipper</title>
 
-  <title>Penguin Flipper</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-
-<body>
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Welcome To Penguin Flipper!</h3> <br>
-      <p>Rules: you will have 5 seconds to look at the pictures then you will have 30 seconds to match cards.</p><br>
-      <form id="login-form">
-        <input id="username" type="text" placeholder="Your username" />
-        <input type="submit" value="Let's get started!" />
-      </form>
-
-    </div>
-  </div>
-
-  <div id="rank-board-modal" class="modal">
-
-    <!-- Modal content -->
-    <div class="rank-board">
-      <span class="close" id="rank-board-close">&times;</span>
-      <h3>Check out the ranks</h3> <br>
-      <table id="rank-board-table">
-        <tr>
-          <th>Username</th>
-          <th>Score</th>
-        </tr>
-      </table>
-
-    </div>
-  </div>
-
-
-  <div class="game-page">
-    <div class="header-container">
-      <h1 class="page-title">Penguin Flipper</h1><br>
-      <button class="btn-primary" id="btn-start-game">Start</button>
-      <button id="btn-new-game">New Game</button>
-      <button id="btn-show-rank">Rank Board</button><br>
-
-      <div class="col-md-12-center" id="timer-bar">
+  <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Welcome To Penguin Flipper!</h3>
+        <br />
+        <p>
+          Rules: you will have 5 seconds to look at the pictures then you will
+          have 30 seconds to match cards.
+        </p>
+        <br />
+        <form id="login-form">
+          <input id="username" type="text" placeholder="Your username" />
+          <input type="submit" value="Let's get started!" />
+        </form>
       </div>
     </div>
 
-    <div class="row-begin-countdown">
-      <h2 id="welcome"></h2>
-
-    </div>
-
-    <div class="memory-game">
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
-      </div>
-
-      <div class="card-container">
-        <div class="card">
-          <img class="front-face" />
-          <img class="back-face" src="card_face.png" alt="card back" />
-        </div>
+    <div id="rank-board-modal" class="modal">
+      <!-- Modal content -->
+      <div class="rank-board">
+        <span class="close" id="rank-board-close">&times;</span>
+        <h3>Check out the ranks</h3>
+        <br />
+        <table id="rank-board-table">
+          <tr>
+            <th>Username</th>
+            <th>Score</th>
+          </tr>
+        </table>
       </div>
     </div>
 
-    <div class="matched-container">
-      <h2>
-        Penguins Collected
-      </h2>
+    <div class="game-page">
+      <div class="header-container">
+        <h1 class="page-title">Penguin Flipper</h1>
+        <br />
+        <button class="btn-primary" id="btn-start-game">Start</button>
+        <button id="btn-new-game">New Game</button>
+        <button id="btn-show-rank">Rank Board</button><br />
+
+        <div class="col-md-12-center" id="timer-bar"></div>
+      </div>
+
+      <div class="row-begin-countdown">
+        <h2 id="welcome"></h2>
+      </div>
+
+      <div class="memory-game">
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <img class="front-face" />
+            <img class="back-face" src="card_face.png" alt="card back" />
+          </div>
+        </div>
+      </div>
+
+      <div class="matched-container">
+        <h2>
+          Penguins Collected
+        </h2>
+      </div>
     </div>
-  </div>
 
-  <script src="index.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
